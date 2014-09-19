@@ -2,9 +2,11 @@ package com.streetbees;
 
 import com.codahale.metrics.health.HealthCheck;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.google.common.cache.CacheBuilderSpec;
 import com.streetbees.config.AppConfig;
 import com.streetbees.spring.SpringContextLoaderListener;
 import io.dropwizard.Application;
+import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.jersey.sessions.HttpSessionProvider;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -35,11 +37,11 @@ public class AdminConsoleService extends Application<AppConfig> {
 
     @Override
     public void initialize(Bootstrap<AppConfig> bootstrap) {
-        bootstrap.addBundle(new ViewBundle());
         bootstrap.getObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL);
+        //serve up static asserts.
+        bootstrap.addBundle(new AssetsBundle("/assets", "/assets"));
+//        CacheBuilderSpec cacheBuilderSpec = (System.getenv("FILE_CACHE_ENABLED") == null) ? CacheBuilderSpec.parse("maximumSize=0") : AssetsBundle.DEFAULT_CACHE_SPEC;
 
-        //serves up HTML.
-//        bootstrap.addBundle(new AssetsBundle("/assets/", "/myapp/"));
     }
 
     @Override

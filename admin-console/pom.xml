@@ -45,11 +45,11 @@
             <artifactId>dropwizard-views</artifactId>
             <version>${dropwiard.version}</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>io.dropwizard</groupId>-->
-            <!--<artifactId>dropwizard-assets</artifactId>-->
-            <!--<version>${dropwiard.version}</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-assets</artifactId>
+            <version>${dropwiard.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>net.vz.mongodb.jackson</groupId>
