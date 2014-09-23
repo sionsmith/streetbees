@@ -40,6 +40,7 @@ public class AdminConsoleService extends Application<AppConfig> {
         bootstrap.getObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL);
         //serve up static asserts.
         bootstrap.addBundle(new AssetsBundle("/assets", "/assets"));
+        bootstrap.addBundle(new ViewBundle());
 //        CacheBuilderSpec cacheBuilderSpec = (System.getenv("FILE_CACHE_ENABLED") == null) ? CacheBuilderSpec.parse("maximumSize=0") : AssetsBundle.DEFAULT_CACHE_SPEC;
 
     }
