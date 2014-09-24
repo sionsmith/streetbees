@@ -85,7 +85,7 @@ public class AdminConsoleService extends Application<AppConfig> {
         environment.servlets().addServletListeners(new SpringContextLoaderListener(ctx));
 
         //activate Spring Security filter
-        FilterRegistration.Dynamic filterRegistration = environment.servlets().addFilter("springSecurityFilterChain", DelegatingFilterProxy.class);
-        filterRegistration.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), false, "/*");
+//        FilterRegistration.Dynamic filterRegistration = environment.servlets().addFilter("springSecurityFilterChain", DelegatingFilterProxy.class);
+//        filterRegistration.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), false, "/*");
     }
 }

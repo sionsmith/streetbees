@@ -10,7 +10,7 @@ import java.nio.charset.Charset;
 public class SignInView extends View {
 
     public SignInView(String templateName) {
-        super(templateName);
+        super("sigin.ftl");
     }
 
     protected SignInView(String templateName, Charset charset) {

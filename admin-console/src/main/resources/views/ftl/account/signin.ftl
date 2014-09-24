@@ -1,3 +1,4 @@
+<#-- @ftlvariable name="" type="com.streetbees.views.SignInView" -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
